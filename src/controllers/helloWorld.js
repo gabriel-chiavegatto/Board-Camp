@@ -1,4 +1,3 @@
-function helloWorld(req,res){
+export default function helloWorld(req,res){
     res.status(200).send("Hello world");
 }
-export {helloWorld}

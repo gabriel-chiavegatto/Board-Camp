@@ -10,12 +10,12 @@ const connection = new Pool({
   database: 'boardcamp'
 });
 
+export {connection}
+
+
 // const connection = new Pool({
 //     connectionString: process.env.DATABASE_URL,
 // });
-  
-export {connection}
-  
     
   // const query = connection.query('SELECT * FROM produtos;');  
   // query.then(result => {
