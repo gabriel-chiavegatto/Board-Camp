@@ -8,6 +8,8 @@ import customersList from "./controllers/customersList.js";
 import theCustomer from "./controllers/theCustomer.js";
 import newCustomer from "./controllers/newCustomer.js";
 import updateCustomer from "./controllers/updateCustomer.js";
+import rentGame from "./controllers/rentGame.js";
+import rentalList from "./controllers/rentalList.js";
 
 const router = Router();
 
@@ -20,5 +22,7 @@ router.get("/customers", customersList);
 router.get("/customers/:id", theCustomer);
 router.post("/customers", newCustomer);
 router.put("/customers/:id", updateCustomer);
+router.get("/rentals", rentalList);
+router.post("/rentals", rentGame);
 
 export default router;
