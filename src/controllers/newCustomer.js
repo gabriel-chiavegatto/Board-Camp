@@ -18,6 +18,11 @@ export default async function newCustomer(req, res) {
         if(isNaN(cpf) || isNaN(phone)){
             return res.sendStatus(400);
         }
+        const confirmCpfAvailability = (await connection.query('SELECT * FROM customers WHERE cpf = $1',[cpf])).rows;
+        if(confirmCpfAvailability.length !== 0){
+            res.sendStatus(409)
+        }
+
         await connection.query('INSERT INTO customers (name, phone, cpf, birthday) VALUES ($1,$2,$3,$4)',[name, phone, cpf, birthday])
 
         res.sendStatus(201);
