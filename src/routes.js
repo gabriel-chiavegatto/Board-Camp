@@ -11,6 +11,7 @@ import updateCustomer from "./controllers/updateCustomer.js";
 import rentGame from "./controllers/rentGame.js";
 import rentalList from "./controllers/rentalList.js";
 import returnGame from "./controllers/returnGame.js";
+import deleteRental from "./controllers/deleteRental.js";
 
 const router = Router();
 
@@ -26,5 +27,6 @@ router.put("/customers/:id", updateCustomer);
 router.get("/rentals", rentalList);
 router.post("/rentals", rentGame);
 router.post("/rentals/:id/return", returnGame);
+router.delete("/rentals/:id", deleteRental)
 
 export default router;
