@@ -16,8 +16,3 @@ export {connection}
 // const connection = new Pool({
 //     connectionString: process.env.DATABASE_URL,
 // });
-    
-  // const query = connection.query('SELECT * FROM produtos;');  
-  // query.then(result => {
-  //   console.log(result.rows);
-  // });

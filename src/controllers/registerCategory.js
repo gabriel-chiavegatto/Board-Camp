@@ -1,7 +1,7 @@
 import joi from 'joi';
 import { connection } from '../database.js';
 
-export default async function newCategory(req,res){
+export default async function registerCategory(req,res){
     try{
         const {name} = req.body;
 
